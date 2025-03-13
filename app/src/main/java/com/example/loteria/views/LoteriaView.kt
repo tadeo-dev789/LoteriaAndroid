@@ -34,9 +34,12 @@ fun LoteriaView(viewModel: LoteriaViewModel) {
         } else {
             LotteryNumbers(numbers = lottoNumbers)
         }
-
         Button(onClick = { viewModel.generateLottoNumbers() }) {
             Text(text = "Generar", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        }
+
+        Button(onClick = { viewModel.clearNumbers() }) {
+            Text(text = "Reiniciar", fontSize = 20.sp, fontWeight = FontWeight.Bold)
         }
     }
 }

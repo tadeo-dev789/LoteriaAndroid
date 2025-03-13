@@ -12,4 +12,8 @@ class LoteriaViewModel: ViewModel() {
     fun generateLottoNumbers(){
         _lottoNumbers.value = (1..60).shuffled().take (6).sorted()
     }
+
+    fun clearNumbers() {
+        _lottoNumbers.value = emptyList()
+    }
 }
